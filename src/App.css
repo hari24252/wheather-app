@@ -1,0 +1,153 @@
+/* Reset & basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #f0f0f0; /* light gray background for the page */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Main container for mobile view */
+.container {
+  width: 100vw;      /* full viewport width */
+  height: 100vh;     /* full viewport height */
+  background: #ffffff; /* white background */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  overflow-y: auto;   /* scroll if content overflows */
+}
+
+/* Input field & search icon */
+.input-container {
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.city-input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px 0 0 10px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.search-icon {
+  background: #ddd;
+  border-radius: 0 10px 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-icon:hover {
+  background: #ccc;
+}
+
+.search-icon img {
+  width: 22px;
+  height: 22px;
+}
+
+/* Weather Details */
+.image img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.temp {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.location, .country {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.cord {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.data-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.element {
+  display: flex;
+  align-items: center;
+}
+
+.element .icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+}
+
+.data {
+  text-align: left;
+}
+
+.humidity-percentage, .wind-percentage {
+  font-weight: bold;
+}
+
+.text {
+  font-size: 0.9rem;
+}
+
+/* Footer */
+p.copyright {
+  margin-top: auto;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+p.copyright span {
+  font-weight: bold;
+}
+
+/* Responsive */
+@media screen and (max-width: 500px) {
+  .container {
+    padding: 15px;
+  }
+  .temp {
+    font-size: 2rem;
+  }
+  .location, .country {
+    font-size: 1rem;
+  }
+  .cord {
+    flex-direction: column;
+    gap: 5px;
+    padding: 0 10px;
+  }
+  .data-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
